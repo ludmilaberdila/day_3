@@ -1,0 +1,78 @@
+package Project_Automate;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class TeachersWebElements {
+    public WebDriver driver;
+
+    public TeachersWebElements(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(xpath = "//button[contains(text(), 'Add teacher')]")
+    public WebElement addTeachButton;
+
+    @FindBy(xpath = "//div[@role='presentation']//button[contains(text(),'Cancel')]")
+    public WebElement cancelButton;
+
+    @FindBy(id = "modal")
+    public WebElement modal;
+
+    @FindBy(css="label.Mui-error")
+    public WebElement inputLabelError;
+
+    @FindBy(css="div.css-1v4ccyo.Mui-error")
+    public WebElement inputDivError;
+
+    @FindBy(css="div#modal input[name=\"name\"]")
+    public WebElement inputFirstName;
+
+    @FindBy(css="div#modal input[name=\"lastName\"]")
+    public WebElement inputLastName;
+    @FindBy(css="div#modal input[name=\"phoneNumber\"]")
+    public WebElement inputPhoneNumber;
+
+    @FindBy(css="div#modal input[name=\"email\"]")
+    public WebElement inputEmailAddress;
+
+    @FindBy(css="div#modal input[name=\"specialization\"]")
+    public WebElement inputSpecialization;
+
+    @FindBy(xpath = "//form[contains(@class, 'form')]//div[contains(@class, 'MuiFormControl-root')][1]")
+    public WebElement inputDivFirstName;
+
+    @FindBy(xpath = "//form[contains(@class, 'form')]//div[contains(@class, 'MuiFormControl-root')][2]")
+    public WebElement inputDivLastName;
+    @FindBy(xpath = "//form[contains(@class, 'form')]//div[contains(@class, 'MuiFormControl-root')][3]")
+    public WebElement inputDivPhoneNumber;
+
+    @FindBy(xpath = "//form[contains(@class, 'form')]//div[contains(@class, 'MuiFormControl-root')][4]")
+    public WebElement inputDivEmail;
+
+    @FindBy(xpath = "//form[contains(@class, 'form')]//div[contains(@class, 'MuiFormControl-root')][5]")
+    public WebElement inputDivSpecialization;
+
+    @FindBy(xpath = "//form[contains(@class, 'form')]//div[contains(@class, 'MuiFormControl-root')][6]")
+    public WebElement inputDivCourses;
+
+    @FindBy(xpath = "//ul[contains(@class, 'MuiList-root')]//li[contains(text(), 'API from Mr Jackson')]")
+    public WebElement mrJacksonSelector;
+
+    @FindBy(xpath = "//ul[contains(@class, 'MuiList-root')]")
+    public WebElement courseDropUl;
+
+    @FindBy(xpath = "//form[contains(@class, 'form')]//button[@type='submit']")
+    public WebElement submitTeacherForm;
+
+    @FindBy(xpath = "//div[contains(@class, 'MuiAlert-successSuccess')]")
+    public WebElement successAlert;
+    @FindBy(xpath = "//div[contains(@class, 'MuiAlert-errorSuccess')]")
+    public WebElement errorAlert;
+
+
+}
+

@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test" parallel="classes" thread-count="2">
+    <test name="Parallel Execution Test">
+        <classes>
+            <class name="tests.HomePageTests"></class>
+            <class name="tests.BrowseFoodsTests"></class>
+        </classes>
+    </test>
+
+    <test name="Benas Test">
+        <classes>
+            <class name="tests.HomePageTests"></class>
+            <class name="tests.BrowseFoodsTests"></class>
+        </classes>
+    </test>
+</suite>

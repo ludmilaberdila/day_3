@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All tests">
+
+    <suite-files>
+
+        <suite-file path="practiceTestNG.xml"></suite-file>
+
+        <suite-file path="groupingTest.xml"></suite-file>
+
+        <suite-file path="regressionTest.xml"></suite-file>
+
+        <suite-file path="smokeTest.xml"></suite-file>
+
+    </suite-files>
+
+</suite>
