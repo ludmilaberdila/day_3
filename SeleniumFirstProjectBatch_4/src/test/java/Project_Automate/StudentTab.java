@@ -26,6 +26,7 @@ public class StudentTab {
             put("phone", "7739853257");
             put("groupId", "Batch4");
             put("studyFormat", "ONLINE");
+
         }};
 
         WebDriver driver = Driver.getDriver();

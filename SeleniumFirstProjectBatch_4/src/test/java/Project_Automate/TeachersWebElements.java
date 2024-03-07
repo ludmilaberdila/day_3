@@ -28,7 +28,7 @@ public class TeachersWebElements {
     @FindBy(css="div.css-1v4ccyo.Mui-error")
     public WebElement inputDivError;
 
-    @FindBy(css="div#modal input[name=\"name\"]")
+    @FindBy(css="div#modal input[name='name']")
     public WebElement inputFirstName;
 
     @FindBy(css="div#modal input[name=\"lastName\"]")
@@ -73,6 +73,24 @@ public class TeachersWebElements {
     @FindBy(xpath = "//div[contains(@class, 'MuiAlert-errorSuccess')]")
     public WebElement errorAlert;
 
+    @FindBy(xpath = "//div/table/tbody/tr[1]/td[6]/div")
+    public WebElement editeButton;
 
+    @FindBy(xpath = "//div[@class='css-1bslj30']//div[@class='css-syc7th']//p[@class='css-7zvtr8'][2]")
+    public WebElement numberOfTeachers;
+
+    @FindBy(xpath = "//div[@class='css-1bslj30']//div[@class='css-syc7th']//div[2]//input")
+    public WebElement paginationCount;
+
+    @FindBy(xpath = "//table//tbody")
+    public WebElement tableBodyTr;
+
+    @FindBy(xpath = "//div[contains(@class, 'MuiPaper-root') and contains(@style, 'opacity: 1')]" +
+            "//ul[contains(@class, 'MuiMenu-list')]//li[contains(text(), 'Edit')]")
+    public WebElement editTeacherAction;
+
+    @FindBy(xpath = "//div[contains(@class, 'MuiPaper-root') and contains(@style, 'opacity: 1')]" +
+            "//ul[contains(@class, 'MuiMenu-list')]//li[contains(text(), 'Delete')]")
+    public WebElement deleteTeacherAction;
 }
 

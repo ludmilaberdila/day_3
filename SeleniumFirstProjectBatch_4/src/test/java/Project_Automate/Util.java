@@ -176,4 +176,10 @@ public class Util {
             teacherPath.submitTeacherForm.click();
         }
     }
+
+    public static String getNumberOfTeachers(TeachersWebElements teacherPath) throws InterruptedException {
+        Thread.sleep(2000);
+        String[] fromTotal_2 = teacherPath.numberOfTeachers.getText().split(" ");
+        return fromTotal_2[1];
+    }
 }

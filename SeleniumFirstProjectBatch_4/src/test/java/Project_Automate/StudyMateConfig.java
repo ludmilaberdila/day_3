@@ -51,6 +51,7 @@ public class StudyMateConfig {
                 .isDisplayed());
         Thread.sleep(2000);
         Util.printLog("success", "User logged in");
+
     }
 
     public void navigateToPage(String page){

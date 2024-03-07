@@ -1,4 +1,4 @@
-package pages;
+package gadgetarium.pages;
 
 import Utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -22,7 +22,3 @@ public class HomeworkDemoBlazePage {
     @FindBy(linkText = "Log in")
     public WebElement login;
 }
-//    loginusername
-//            loginpassword
-//    Log in
-//}

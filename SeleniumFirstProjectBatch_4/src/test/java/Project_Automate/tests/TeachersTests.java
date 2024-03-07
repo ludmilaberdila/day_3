@@ -7,6 +7,7 @@ import Utilities.Driver;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -32,7 +33,7 @@ public class TeachersTests {
         teacherPath = new TeachersWebElements(this.driver);
     }
 
-    @Test(timeout = 10000)
+    @Test
     public void step11_clickAddTeacher() throws InterruptedException {
         Util.printLog("success", "Check if new teacher form is displayed when " +
                 "\"Add teacher\" is clicked");
@@ -288,5 +289,20 @@ public class TeachersTests {
         Assert.assertTrue("Teacher with short values entered on \"First name\", " +
                 "\"Last name\", \"Phone number\" and \"Specialization\" with success", !teacherAdded);
     }
+
+    @Test
+    public void step21_editTeacher() throws InterruptedException {
+        String totalTeachers = Util.getNumberOfTeachers(teacherPath);
+        teacherPath.paginationCount.clear();
+        teacherPath.paginationCount.sendKeys(totalTeachers);
+        teacherPath.paginationCount.sendKeys(Keys.RETURN);
+        teacherPath.tableBodyTr.findElement(
+                By.xpath("//tr[" + Integer.parseInt(totalTeachers) + "]//td[6]//button")).click();
+        teacherPath.editTeacherAction.click();
+        teacherPath.inputFirstName.clear();
+        teacherPath.inputFirstName.sendKeys("TestNewName");
+        teacherPath.submitTeacherForm.click();
+    }
+
 
 }

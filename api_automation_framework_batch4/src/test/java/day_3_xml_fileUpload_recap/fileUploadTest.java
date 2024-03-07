@@ -7,7 +7,7 @@ import utilities.CashwiseAuthorization;
 
 import java.io.File;
 
-public class fileUpload {
+public class fileUploadTest {
 
     @Test
     public void fileUploads(){

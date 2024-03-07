@@ -1,4 +1,4 @@
-package step_definitions;
+package gadgetarium.pages.step_definitions;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
